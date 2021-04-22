@@ -1,7 +1,7 @@
 import BlogPost from 'src/components/BlogPost'
 
 export const QUERY = gql`
-  query BlogPostQuery($id: Int!) {
+  query BlogPostQuery($id: String!) {
     post(id: $id) {
       id
       title
