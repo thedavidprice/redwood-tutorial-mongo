@@ -14,6 +14,7 @@ const BlogLayout = ({ children }) => {
           >
             Redwood Blog
           </Link>
+          <span className="text-lg tracking-normal">(MongoDB Edition)</span>
         </h1>
         <nav>
           <ul className="relative flex items-center font-light">

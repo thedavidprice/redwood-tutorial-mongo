@@ -1,6 +1,6 @@
 export const schema = gql`
   type Contact {
-    id: Int!
+    id: String!
     name: String!
     email: String!
     message: String!
