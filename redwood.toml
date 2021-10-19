@@ -8,8 +8,10 @@
 [web]
   port = 8910
   apiProxyPath = "/.netlify/functions"
+  title = "Redwood Tutorial Blog"
 [api]
   port = 8911
-  schemaPath = "./api/db/schema.prisma"
 [browser]
   open = true
+[experimental]
+  esbuild = false

@@ -13,7 +13,7 @@ describe('posts', () => {
     expect(result).toEqual(scenario.post.one)
   })
 
-  scenario('creates a post', async (scenario) => {
+  scenario('creates a post', async () => {
     const result = await createPost({
       input: { title: 'String', body: 'String' },
     })

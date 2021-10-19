@@ -1,10 +1,10 @@
 import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 import { navigate, routes } from '@redwoodjs/router'
-import PostForm from 'src/components/PostForm'
+import PostForm from 'src/components/Post/PostForm'
 
 export const QUERY = gql`
-  query FIND_POST_BY_ID($id: String!) {
+  query FindPostById($id: Int!) {
     post: post(id: $id) {
       id
       title
@@ -14,7 +14,7 @@ export const QUERY = gql`
   }
 `
 const UPDATE_POST_MUTATION = gql`
-  mutation UpdatePostMutation($id: String!, $input: UpdatePostInput!) {
+  mutation UpdatePostMutation($id: Int!, $input: UpdatePostInput!) {
     updatePost(id: $id, input: $input) {
       id
       title

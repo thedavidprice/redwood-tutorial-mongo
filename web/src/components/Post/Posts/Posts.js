@@ -2,10 +2,10 @@ import { useMutation } from '@redwoodjs/web'
 import { toast } from '@redwoodjs/web/toast'
 import { Link, routes } from '@redwoodjs/router'
 
-import { QUERY } from 'src/components/PostsCell'
+import { QUERY } from 'src/components/Post/PostsCell'
 
 const DELETE_POST_MUTATION = gql`
-  mutation DeletePostMutation($id: String!) {
+  mutation DeletePostMutation($id: Int!) {
     deletePost(id: $id) {
       id
     }

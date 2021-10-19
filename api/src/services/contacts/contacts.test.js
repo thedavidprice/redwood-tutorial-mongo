@@ -1,9 +1,10 @@
 import { contacts } from './contacts'
 
 describe('contacts', () => {
-  scenario('returns all contacts', async (scenario) => {
-    const result = await contacts()
+  scenario('returns a list of contacts', async (scenario) => {
+    const list = await contacts()
 
-    expect(result.length).toEqual(Object.keys(scenario.contact).length)
+    expect(list.length).toEqual(Object.keys(scenario.contact).length)
+    expect(list[0].email).toEqual(scenario.contact.john.email)
   })
 })
